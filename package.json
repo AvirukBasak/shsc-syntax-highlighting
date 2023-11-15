@@ -1,0 +1,25 @@
+{
+  "name": "shsc-syntax-highlighting",
+  "displayName": "Shsc Syntax Highlighting",
+  "description": "Syntax highlighting for Shsc on Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "shsc",
+      "aliases": ["Shsc", "shsc"],
+      "extensions": [".shsc", ".txt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "shsc",
+      "scopeName": "source.shsc",
+      "path": "./syntaxes/shsc.tmLanguage.json"
+    }]
+  }
+}

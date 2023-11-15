@@ -1,0 +1,135 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Shsc",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#moduleDeclaration"
+		},
+		{
+			"include": "#moduleUsage"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#rsvLiterals"
+		},
+		{
+			"include": "#numLiterals"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#character"
+		},
+		{
+			"include": "#formatStrings"
+		},
+		{
+			"include": "#operatorsFromC"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "#.*"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.shsc",
+					"match": "\\b(proc|start|if|else|elif|then|while|for|in|from|to|by|do|block|return|end|var|const|weak)\\b"
+				},
+				{
+					"name": "keyword.other",
+					"match": "\\b(true|false|null|lf)\\b"
+				}
+			]
+		},
+		"rsvLiterals": {
+			"name": "constant.language",
+			"match": "\\b(bul|chr|i64|f64|str|lst|map|any)\\b"
+		},
+		"numLiterals": {
+			"name": "constant.numeric",
+			"match": "\\b(0b[01]+|0o[0-7]+|0x[0-9a-fA-F]+|\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b"
+		},
+		"moduleDeclaration": {
+			"name": "entity.name.class",
+			"match": "module\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\n+"
+		},
+		"moduleUsage": {
+			"name": "entity.name.class",
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*):\\b"
+		},
+		"function": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
+				},
+				{
+					"name": "support.function",
+					"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.shsc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"character": {
+			"name": "string.quoted.single",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.shsc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"formatStrings": {
+			"name": "string.interpolated",
+			"begin": "f\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "\\\\."
+				},
+				{
+					"name": "constant.character.escape",
+					"match": "\\{[^}]*\\}"
+				}
+			]
+		},
+		"operatorsFromC": {
+			"patterns": [
+				{
+					"name": "keyword.operator.new",
+					"match": "\\+\\+|\\+=|\\+|--|-=|-|\\*\\*=|\\*=|\\*|\\/\\/=|\\/=|\\/|%|\\^=|\\^|&=|&&|&|\\|\\|=|\\|=|\\|\\||\\||<<=|<<|<=|<|>>=|>>|>=|>|==|=|!=|!|~|\\?|:|\\.|;|\\[|\\]|\\(|\\)|\\{|\\}"
+				}
+			]
+		}
+	},
+	"scopeName": "source.shsc"
+}
