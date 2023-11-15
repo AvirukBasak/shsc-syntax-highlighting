@@ -13,7 +13,7 @@
     "languages": [{
       "id": "shsc",
       "aliases": ["Shsc", "shsc"],
-      "extensions": [".shsc", ".txt"],
+      "extensions": [".shsc"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
@@ -21,5 +21,10 @@
       "scopeName": "source.shsc",
       "path": "./syntaxes/shsc.tmLanguage.json"
     }]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AvirukBasak/shsc-syntax-highlighting.git"
+  },
+  "license": "MIT"
 }
