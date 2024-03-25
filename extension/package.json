@@ -2,7 +2,7 @@
   "name": "shsc-syntax-highlighting",
   "displayName": "Shsc Syntax Highlighting",
   "description": "Syntax highlighting for Shsc on Visual Studio Code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.84.0"
   },
