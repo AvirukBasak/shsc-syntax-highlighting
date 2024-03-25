@@ -111,18 +111,31 @@
 			]
 		},
 		"module-decl": {
-			"match": "(module)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\n+",
+			"match": "(module)\\s+([a-zA-Z_][a-zA-Z0-9_:]*)\\n+",
 			"captures": {
 				"1": {
 					"name": "keyword"
 				},
 				"2": {
-					"name": "entity.name.class"
+					"name": "entity.name.class",
+					"patterns": [
+						{
+							"match": "([a-zA-Z_][a-zA-Z0-9_]*)(:+)",
+							"captures": {
+								"1": {
+									"name": "entity.name.class"
+								},
+								"2": {
+									"name": "keyword.operator"
+								}
+							}
+						}
+					]
 				}
 			}
 		},
 		"module-ref": {
-			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)(:)\\b",
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)(:|::)\\b",
 			"captures": {
 				"1": {
 					"name": "entity.name.class"
