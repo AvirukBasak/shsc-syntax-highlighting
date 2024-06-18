@@ -63,7 +63,7 @@
 		},
 		"builtin-type": {
 			"name": "entity.name.class",
-			"match": "\\b(bul|chr|i64|f64|str|lst|map|any)\\b"
+			"match": "\\b(bul|chr|i64|f64|str|lst|map|any|lambda)\\b"
 		},
 		"c-like-opreator": {
 			"name": "keyword.operator",
