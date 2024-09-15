@@ -2,7 +2,8 @@
   "name": "shsc-syntax-highlighting",
   "displayName": "Shsc Syntax Highlighting",
   "description": "Syntax highlighting for Shsc on Visual Studio Code",
-  "version": "1.1.0",
+  "version": "1.1.1",
+  "icon": "./ai_gen_logo.png",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -26,5 +27,7 @@
     "type": "git",
     "url": "https://github.com/AvirukBasak/shsc-syntax-highlighting.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publisher": "avirukbasak",
+  "keywords": ["SHSC", "shsc", "syntax", "highlighting"]
 }
